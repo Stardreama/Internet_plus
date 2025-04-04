@@ -58,17 +58,17 @@ frontend/
 ├── package.json // 项目依赖和脚本配置
 ├── vite.config.js // Vite 构建工具配置
 └── src/
-├── App.vue // 主应用组件
-├── assets/
-│ ├── base.css // 全局基础样式
-│ ├── main.css // 主要样式文件
-│ └── logo.svg // 应用 Logo
-├── components/
-│ ├── InventoryDashboard.vue // 库存监测与升级展示组件
-│ ├── MarketForecast.vue // 市场预测展示组件
-│ ├── RiskAssessment.vue // 风险评估展示组件
-│ └── ... // 其他业务相关组件
-└── main.js // 应用入口 JS 文件
+    ├── App.vue // 主应用组件
+    ├── assets/
+    │ ├── base.css // 全局基础样式
+    │ ├── main.css // 主要样式文件
+    │ └── logo.svg // 应用 Logo
+    ├── components/
+    │ ├── InventoryDashboard.vue // 库存监测与升级展示组件
+    │ ├── MarketForecast.vue // 市场预测展示组件
+    │ ├── RiskAssessment.vue // 风险评估展示组件
+    │ └── ... // 其他业务相关组件
+    └── main.js // 应用入口 JS 文件
 ```
 
 ### 后端
