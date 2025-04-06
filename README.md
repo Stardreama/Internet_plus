@@ -49,6 +49,24 @@
 - **辅助工具**
   - 通用数据处理、格式转换及其他工具函数
 
+## 项目目标
+
+### 库存监测与升级板块
+
+升级：例如：用户输入：库存明细（仓库里不同型号的产品的规格、数量、位置）、原材料库存数据、生产计划表 → 判断周转率、库存积压成本
+输出：给出库存优化方案、库存健康度、能否及时周转、安全问题排查
+监测：安装实时监控，智能监测 → 给出库存产品进出变化水平线、直观展示哪些产品库存还多，还少 → 帮助指导公司生产规划
+
+### 市场预测板块
+
+用户输入：历史销售数据、客户分类及采购模式（定期/不定期）（稳定客户群体数量我还在要数据）、销售区域的市场特点（有没有开拓例如农村电缆建设，新能源建设电缆需求，是否稳定还是价格变化幅度大）、行业发展趋势
+输出：价格趋势预测、产品如何调整结构，产品需求区域分析
+
+### 风险评估板块
+
+用户输入：财务数据（现金流，应付预付账款，负债等信息）、政策法规变化（政府资金鼓励拨款资料还在问）、客户信用数据......
+输出：客户信用风险评估、财务风险预警...
+
 ## 项目文件结构
 
 ### 前端
@@ -59,17 +77,17 @@ frontend/
 ├── package.json // 项目依赖和脚本配置
 ├── vite.config.js // Vite 构建工具配置
 └── src/
-    ├── App.vue // 主应用组件
-    ├── assets/
-    │ ├── base.css // 全局基础样式
-    │ ├── main.css // 主要样式文件
-    │ └── logo.svg // 应用 Logo
-    ├── components/
-    │ ├── InventoryDashboard.vue // 库存监测与升级展示组件
-    │ ├── MarketForecast.vue // 市场预测展示组件
-    │ ├── RiskAssessment.vue // 风险评估展示组件
-    │ └── ... // 其他业务相关组件
-    └── main.js // 应用入口 JS 文件
+├── App.vue // 主应用组件
+├── assets/
+│ ├── base.css // 全局基础样式
+│ ├── main.css // 主要样式文件
+│ └── logo.svg // 应用 Logo
+├── components/
+│ ├── InventoryDashboard.vue // 库存监测与升级展示组件
+│ ├── MarketForecast.vue // 市场预测展示组件
+│ ├── RiskAssessment.vue // 风险评估展示组件
+│ └── ... // 其他业务相关组件
+└── main.js // 应用入口 JS 文件
 ```
 
 ### 后端
@@ -77,23 +95,23 @@ frontend/
 ```markdown
 backend/
 ├── app/
-│ ├── __init__.py // 初始化应用包
+│ ├── **init**.py // 初始化应用包
 │ ├── main.py // FastAPI 应用入口，启动 API 服务
 │ ├── api/
-│ │ ├── __init__.py
+│ │ ├── **init**.py
 │ │ ├── inventory.py // 库存管理相关 API 接口
 │ │ ├── market.py // 市场预测相关 API 接口
 │ │ └── risk.py // 风险评估相关 API 接口
 │ ├── models/
-│ │ ├── __init__.py
+│ │ ├── **init**.py
 │ │ └── models.py // 数据库模型定义（ORM 映射库存、销售、财务等数据）
 │ ├── services/
-│ │ ├── __init__.py
+│ │ ├── **init**.py
 │ │ ├── inventory_service.py // 库存监控与优化业务逻辑
 │ │ ├── market_service.py // 市场预测业务逻辑（数据处理与 AI 模型）
 │ │ └── risk_service.py // 风险评估业务逻辑（风险计算与预警）
 │ └── utils/
-│ ├── __init__.py
+│ ├── **init**.py
 │ └── helper.py // 辅助工具和通用函数
 ├── requirements.txt // Python 依赖列表
 └── README.md // 后端项目说明与部署指南
